@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
 <script>
-/* Set theme before first paint: saved choice, else system preference. */
-(function(){var t='dark';try{var s=localStorage.getItem('ay-theme');if(s==='light'||s==='dark'){t=s;}else if(window.matchMedia('(prefers-color-scheme: light)').matches){t='light';}}catch(e){}document.documentElement.setAttribute('data-theme',t);})();
+/* Set theme before first paint: the visitor's saved choice, else light
+   (the site's default, whatever the system preference). */
+(function(){var t='light';try{var s=localStorage.getItem('ay-theme');if(s==='light'||s==='dark'){t=s;}}catch(e){}document.documentElement.setAttribute('data-theme',t);})();
 </script>
 <title>Ahmed Youssry — Fractional CFO &amp; Strategy Consultant</title>
 <meta name="description" content="Ahmed Youssry is a fractional CFO, M&amp;A advisor and AI-product CTO who helps founders turn good products into financeable, scalable companies. Based in Athens, Georgia, USA." />
 <meta name="author" content="Ahmed Youssry" />
 <link rel="canonical" href="https://youssry.info/" />
-<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)" />
-<meta name="theme-color" content="#f4f2ec" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#f4f2ec" />
 <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
 
@@ -23,7 +23,7 @@
 <meta property="og:title" content="Ahmed Youssry — Fractional CFO &amp; Strategy Consultant" />
 <meta property="og:description" content="Finance, product and AI in one operator. 20+ years helping founders turn good products into financeable, scalable companies." />
 <meta property="og:url" content="https://youssry.info/" />
-<meta property="og:image" content="https://youssry.info/og-portrait.jpg" />
+<meta property="og:image" content="https://youssry.info/og-portrait-light.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Ahmed Youssry, Fractional CFO and Strategy Consultant" />
@@ -37,7 +37,7 @@
   "@type": "Person",
   "name": "Ahmed Youssry",
   "url": "https://youssry.info/",
-  "image": "https://youssry.info/og-portrait.jpg",
+  "image": "https://youssry.info/og-portrait-light.jpg",
   "jobTitle": "Fractional CFO & Strategy Consultant",
   "description": "Fractional CFO, M&A advisor and AI-product CTO helping founders build financeable, scalable companies.",
   "email": "mailto:youssry@ready4vc.com",
