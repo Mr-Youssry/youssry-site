@@ -8,7 +8,7 @@ Plain static HTML: one page, no framework, no build step.
 index.html             the page (styles and script inline)
 img/                   images, named <name>-<hash>.webp — served with a one-year cache,
                        so a changed image needs a new filename
-og-portrait-light.jpg  1200×630 share preview (LinkedIn, WhatsApp, X…)
+og-knight.jpg          1200×630 share preview (LinkedIn, WhatsApp, X…)
 favicon.ico, apple-touch-icon.png
 robots.txt, sitemap.xml
 ```

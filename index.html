@@ -23,10 +23,10 @@
 <meta property="og:title" content="Ahmed Youssry — Fractional CFO &amp; Strategy Consultant" />
 <meta property="og:description" content="Finance, product and AI in one operator. 20+ years helping founders turn good products into financeable, scalable companies." />
 <meta property="og:url" content="https://youssry.info/" />
-<meta property="og:image" content="https://youssry.info/og-portrait-light.jpg" />
+<meta property="og:image" content="https://youssry.info/og-knight.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Ahmed Youssry, Fractional CFO and Strategy Consultant" />
+<meta property="og:image:alt" content="Ahmed Youssry, Fractional CFO and Strategy Consultant, beside a blue geometric knight chess piece" />
 <meta property="profile:first_name" content="Ahmed" />
 <meta property="profile:last_name" content="Youssry" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@
   "@type": "Person",
   "name": "Ahmed Youssry",
   "url": "https://youssry.info/",
-  "image": "https://youssry.info/og-portrait-light.jpg",
+  "image": "https://youssry.info/og-knight.jpg",
   "jobTitle": "Fractional CFO & Strategy Consultant",
   "description": "Fractional CFO, M&A advisor and AI-product CTO helping founders build financeable, scalable companies.",
   "email": "mailto:youssry@ready4vc.com",
@@ -177,18 +177,23 @@
   .hero-contact span{display:inline-flex;align-items:center;gap:8px}
   .hero-contact svg{flex:none}
   .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:40px;align-items:center}
-  /* Portrait — a cut-out per theme: the tan suit on the dark page, the
-     navy suit on the light page (only the matching one is displayed).
-     The photo is cropped through the arms, so the bottom fades out
-     instead of ending in a hard line. */
+  /* Hero art — the knight, one treatment per theme (only the matching one
+     is displayed). Light: the original speckled print, its edges faded
+     into the page by a circular mask (the print's cream is nearly the
+     page colour). Dark: the knight cut out, lifted off the page by a
+     soft blue glow that follows its silhouette. */
   .hero-photo{margin:0;position:relative;justify-self:center;width:100%;max-width:380px}
   .hero-photo img{
     position:relative;display:block;width:100%;height:auto;
     aspect-ratio:1/1;object-fit:contain;object-position:center;
-    filter:drop-shadow(0 22px 26px var(--photo-shadow));
-    -webkit-mask-image:linear-gradient(to bottom,#000 76%,transparent 99%);
-    mask-image:linear-gradient(to bottom,#000 76%,transparent 99%);
     animation:photoIn .9s ease .15s both;
+  }
+  .hero-photo .for-light{
+    -webkit-mask-image:radial-gradient(circle,#000 49%,transparent 75%);
+    mask-image:radial-gradient(circle,#000 49%,transparent 75%);
+  }
+  .hero-photo .for-dark{
+    filter:drop-shadow(0 0 34px rgba(110,169,219,.30)) drop-shadow(0 22px 26px var(--photo-shadow));
   }
   @keyframes photoIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   :root[data-theme="dark"] .hero-photo .for-light,
@@ -552,8 +557,8 @@
         </div>
       </div>
       <figure class="hero-photo">
-        <img class="for-dark" fetchpriority="high" src="img/ahmed-youssry-tan-suit-b65d244a.webp" alt="Ahmed Youssry smiling with arms crossed, in a tan suit, brown fedora, round glasses and a burgundy scarf" width="760" height="760" />
-        <img class="for-light" fetchpriority="high" src="img/ahmed-youssry-navy-suit-8c470353.webp" alt="Ahmed Youssry smiling with arms crossed, in a navy suit, black fedora, round glasses and a burgundy scarf" width="760" height="760" />
+        <img class="for-dark" fetchpriority="high" src="img/knight-cutout-22235f71.webp" alt="A blue geometric knight chess piece with a white halter" width="760" height="760" />
+        <img class="for-light" fetchpriority="high" src="img/knight-print-59b600d1.webp" alt="A blue geometric knight chess piece with a white halter, printed on a speckled cream background" width="760" height="760" />
       </figure>
     </div>
     <div class="hero-contact">
