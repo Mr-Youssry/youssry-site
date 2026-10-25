@@ -177,26 +177,22 @@
   .hero-contact span{display:inline-flex;align-items:center;gap:8px}
   .hero-contact svg{flex:none}
   .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:40px;align-items:center}
-  /* Portrait — the LinkedIn photo with its white background keyed to
-     transparency, so Ahmed's head and shoulders pop out of the blue disc
-     onto the hero background. Full square composition: no crop; the drop
-     shadow follows the image's alpha silhouette. Dark mode only: a crisp
-     stroke in the light theme's background color, built from four
-     zero-blur drop-shadows so it hugs the disc and the hair exactly. */
+  /* Portrait — a cut-out per theme: the tan suit on the dark page, the
+     navy suit on the light page (only the matching one is displayed).
+     The photo is cropped through the arms, so the bottom fades out
+     instead of ending in a hard line. */
   .hero-photo{margin:0;position:relative;justify-self:center;width:100%;max-width:380px}
   .hero-photo img{
     position:relative;display:block;width:100%;height:auto;
     aspect-ratio:1/1;object-fit:contain;object-position:center;
     filter:drop-shadow(0 22px 26px var(--photo-shadow));
+    -webkit-mask-image:linear-gradient(to bottom,#000 76%,transparent 99%);
+    mask-image:linear-gradient(to bottom,#000 76%,transparent 99%);
     animation:photoIn .9s ease .15s both;
   }
   @keyframes photoIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-  :root[data-theme="dark"] .hero-photo img{
-    filter:
-      drop-shadow(3px 0 0 var(--photo-ring)) drop-shadow(-3px 0 0 var(--photo-ring))
-      drop-shadow(0 3px 0 var(--photo-ring)) drop-shadow(0 -3px 0 var(--photo-ring))
-      drop-shadow(0 22px 26px var(--photo-shadow));
-  }
+  :root[data-theme="dark"] .hero-photo .for-light,
+  :root[data-theme="light"] .hero-photo .for-dark{display:none}
 
   /* ---------- Logo strip ---------- */
   .logos{padding:26px 0 0}
@@ -556,7 +552,8 @@
         </div>
       </div>
       <figure class="hero-photo">
-        <img fetchpriority="high" src="img/ahmed-youssry-his-linkedin-photo-on-a-tr-8361c7bc.webp" alt="Ahmed Youssry — his LinkedIn photo on a transparent background: his head and shoulders pop out of a light blue circle, wearing round glasses and a dark polo shirt" width="1200" height="1200" />
+        <img class="for-dark" fetchpriority="high" src="img/ahmed-youssry-tan-suit-b65d244a.webp" alt="Ahmed Youssry smiling with arms crossed, in a tan suit, brown fedora, round glasses and a burgundy scarf" width="760" height="760" />
+        <img class="for-light" fetchpriority="high" src="img/ahmed-youssry-navy-suit-8c470353.webp" alt="Ahmed Youssry smiling with arms crossed, in a navy suit, black fedora, round glasses and a burgundy scarf" width="760" height="760" />
       </figure>
     </div>
     <div class="hero-contact">
